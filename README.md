@@ -20,8 +20,9 @@ sudo docker run -d \
 
 ajouter les 2 commandes cron ci-dessous pour permettre d'acceder au peripherique du réseaux depuis l'exterieur.
 n'oublier pas changer la plage d'adresse ip
-
+(sur le physique pas le docker)
 ```sh
+sudo crontab -e
 @reboot sleep 60 && sudo iptables -A FORWARD -m iprange --src-range 192.168.5.0-192.168.5.255 -j ACCEPT
 @reboot sleep 60 && sudo iptables -A FORWARD -m iprange --dst-range 192.168.5.0-192.168.5.255 -j ACCEPT
 ```
