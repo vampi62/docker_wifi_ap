@@ -1,0 +1,5 @@
+FROM alpine
+
+RUN apk add --no-cache hostapd
+
+CMD hostapd /etc/hostapd/hostapd.conf
