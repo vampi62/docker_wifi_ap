@@ -91,7 +91,7 @@ sudo docker run -d \
 	--net host -it \
 	--privileged \
 	-v /opt/docker_wifi_ap/withoutDHCP/config/hostapd.conf:/etc/hostapd/hostapd.conf:ro \
-	--cap-add=SYS_ADMIN \
+	--cap-add=NET_ADMIN \
 	--restart=always \
 	docker_wifi_ap:latest
 ```
