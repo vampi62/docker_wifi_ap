@@ -26,7 +26,7 @@ sudo docker run -d \
 	--privileged \
 	-v /opt/docker_wifi_ap/withDHCP/config/hostapd.conf:/etc/hostapd/hostapd.conf:ro \
 	-v /opt/docker_wifi_ap/withDHCP/config/dnsmasq.conf:/etc/dnsmasq.conf:ro \
-	--cap-add=SYS_ADMIN \
+	--cap-add=NET_ADMIN \
 	--restart=always \
 	docker_wifi_ap:latest
 ```
